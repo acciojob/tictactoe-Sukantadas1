@@ -3,14 +3,51 @@
 <html>
 
 <head>
+	 <style>
+    .container {
+      text-align: center;
+    }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      gap: 5px;
+      margin-top: 20px;
+    }
+
+    .cell {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #000;
+      font-size: 2em;
+      cursor: pointer;
+    }
+
+    .message {
+      margin-top: 20px;
+    }
+  </style>
 	<link rel="stylesheet" href="styles.css">
+	 <title>Tic Tac Toe</title>
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
+<div class="container">
+  <div id="player-inputs">
+    <input type="text" id="player-1" placeholder="Player 1 Name">
+    <input type="text" id="player-2" placeholder="Player 2 Name">
+    <button id="submit">Submit</button>
+  </div>
 
+  <div id="game-container" style="display:none;">
+    <h1>Tic Tac Toe</h1>
+    <div class="message"></div>
+    <div id="board"></div>
+  </div>
+</div>
 </body>
 
 </html>
